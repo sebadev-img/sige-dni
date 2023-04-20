@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.5.141/pdf.min.js"></script>
+    <title>SIGE-DNI</title>
+  </head>
+  <body id="body">
+    <header>
+      <h1 class="header-title">SIGE-TOOLS</h1>
+    </header>
+    <main>
+      <section class="btn-container">
+        <input class="inputFile" type="file" id="inpFile" />
+        <label for="inpFile">Seleccionar PDF</label>
+        <span id="textFile">Ningun Archivo Seleccionado</span>
+        <button class="btn" type="button" id="btnUpload" disabled>
+          Obtener DNI
+        </button>
+        <br />
+        <br />
+      </section>
+      <section class="list-container">
+        <ul id="ul"></ul>
+      </section>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>
