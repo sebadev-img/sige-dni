@@ -64,6 +64,24 @@ span {
   cursor: default;
 }
 
+#btn-abrir {
+  margin-left: 6px;
+  padding: 2px 4px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-size: 16px;
+  background-color: #c45e5e;
+  cursor: pointer;
+}
+
+#inp-numero {
+  border: 1px solid lightgray;
+  font-size: 16px;
+  margin-left: 8px;
+  padding: 4px 6px;
+}
+
 .list-container {
   margin-top: 24px;
   display: flex;
@@ -78,6 +96,7 @@ ul {
 li {
   margin-top: 10px;
   font-size: 18px;
+  border-bottom: 1px solid lightgray;
 }
 
 .complete {

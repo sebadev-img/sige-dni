@@ -1,10 +1,26 @@
 const inpFile = document.getElementById("inpFile");
+const inpNumero = document.getElementById("inp-numero");
 const textFile = document.getElementById("textFile");
 const btnUpload = document.getElementById("btnUpload");
 const resultText = document.getElementById("resultText");
 const ul = document.getElementById("ul");
 
 btnUpload.disabled = true;
+
+let numero = 0;
+
+inpNumero.oninput = (e) => {
+  console.log("onchange");
+  numero = inpNumero.value;
+  console.log(numero);
+};
+
+const abrirNovedad = (dni, numero) => {
+  window.open(
+    `https://sige.tierradelfuego.gob.ar/SIGEGX/novedadespendientes.aspx?${numero},ILI,PDT,,${dni},`,
+    "_blank"
+  );
+};
 
 const getUniqueDNI = (text) => {
   console.log("entro");
@@ -20,12 +36,19 @@ const getUniqueDNI = (text) => {
     const uniqueDNI = [...new Set(dniArray)].sort((a, b) => a - b);
     console.log(uniqueDNI);
     uniqueDNI.map((dni) => {
+      //crear li para dni
       const node = document.createElement("li");
       node.appendChild(document.createTextNode(dni));
       node.addEventListener("click", () => {
         node.classList.toggle("complete");
       });
       ul.appendChild(node);
+      // crear btn abrir
+      const btn = document.createElement("button");
+      btn.addEventListener("click", () => abrirNovedad(dni, numero));
+      btn.id = "btn-abrir";
+      btn.innerText = "Abrir";
+      node.appendChild(btn);
     });
   }
 };
