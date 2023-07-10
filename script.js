@@ -17,7 +17,7 @@ inpNumero.oninput = (e) => {
 
 const abrirNovedad = (dni, numero) => {
   window.open(
-    `https://sige.tierradelfuego.gob.ar/SIGEGX/novedadespendientes.aspx?${numero},ILI,PDT,,${dni},`,
+    `https://sige.tierradelfuego.gob.ar/SIGEGX/novedadespendientes.aspx?${numero},ILI,PDT,,,${dni},`,
     "_blank"
   );
 };
